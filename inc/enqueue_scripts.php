@@ -6,7 +6,7 @@
 
 function ix_scripts() {
 
-    wp_enqueue_style( 'ix-font_Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap', array(), '1.0.0');
+    //wp_enqueue_style( 'ix-font_Montserrat', '//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap', array(), '1.0.0');
 
 	wp_enqueue_style( 'ix-bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array());
 	wp_enqueue_style( 'ix-slick', get_template_directory_uri() . '/css/slick.css', array());
@@ -40,18 +40,18 @@ function ix_scripts() {
 	//wp_enqueue_script( 'ix-script', get_template_directory_uri() . '/js/script.js', array('jquery'),'1.0.0', true ); // мои скрипты
 
 
-    wp_enqueue_script(
-        'true_loadmore',
-        get_stylesheet_directory_uri() . '/js/loadmore.js',
-        array( 'jquery' ),
-        time() // не кэшируем файл, убираем эту строчку после завершение разработки
-    );
-
-    wp_localize_script(
-        'true_loadmore',
-        'misha',
-        array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
-    );
+//    wp_enqueue_script(
+//        'true_loadmore',
+//        get_stylesheet_directory_uri() . '/js/loadmore.js',
+//        array( 'jquery' ),
+//        time() // не кэшируем файл, убираем эту строчку после завершение разработки
+//    );
+//
+//    wp_localize_script(
+//        'true_loadmore',
+//        'misha',
+//        array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
+//    );
 
     wp_localize_script(
         'ix-send',

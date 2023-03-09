@@ -58,34 +58,34 @@ function get_the_project_info() {
 function get_the_project_gallery() {
 
 	$project_gallery_ids = get_field( 'project_gallery' );
-	$size = 'full';
+	$size                = 'full';
 
-    ob_start();
+	ob_start();
 
-    $i = 0;
-    foreach ( $project_gallery_ids as $item ) {
+	$i = 0;
+	foreach ( $project_gallery_ids as $item ) {
 
-        if ( $i == 0 || $i == 1 ) {
-            ?>
+		if ( $i == 0 || $i == 1 ) {
+			?>
             <div class="col-md-6">
                 <a href="<?php echo wp_get_attachment_image_url( $item, $size ); ?>" data-fancybox="">
-                    <img src="<?php echo ix_get_img_url_for_id( $item, 730, 485)?>" alt="" class="img-responsive">
+                    <img src="<?php echo ix_get_img_url_for_id( $item, 730, 485 ) ?>" alt="" class="img-responsive">
                 </a>
             </div>
-            <?php
-        } else {
-            ?>
+			<?php
+		} else {
+			?>
             <div class="col-sm-3 col-6">
                 <a href="<?php echo wp_get_attachment_image_url( $item, $size ); ?>" data-fancybox="">
-                    <img src="<?php echo ix_get_img_url_for_id( $item, 355, 235 )?>" alt="" class="img-responsive">
+                    <img src="<?php echo ix_get_img_url_for_id( $item, 355, 235 ) ?>" alt="" class="img-responsive">
                 </a>
             </div>
-            <?php
-        }
-        $i++;
-    }
+			<?php
+		}
+		$i ++;
+	}
 
-    echo ob_get_clean();
+	echo ob_get_clean();
 
 }
 
@@ -98,1134 +98,436 @@ function get_the_project_gallery() {
  */
 function get_the_kit_item( $kit_prefix, $mob_version = false ) {
 
-//	$kit_name = $kit_prefix . '_kit';
-//	$kit_data = get_field( $kit_name, 'option' );
-//	$size = 'full';
+	$kit_name = $kit_prefix . '_kit';
+	$kit_data = get_field( $kit_name, 'option' );
+	$size     = 'full';
 //	$kit_img_url = wp_get_attachment_image_url( $item, $size );
 
-    ob_start();
-    ?>
+	ob_start();
+	?>
     <div class="d-md-block d-none">
         <div class="mb-3">
             <div class="text-md"><b>Входит в стоимость:</b></div>
         </div>
 
-        <ul class="single-lg__parts js-tab-controls" data-tabs="parts-1">
-
+        <ul class="single-lg__parts js-tab-controls" data-tabs="parts-<?php echo $kit_prefix; ?>">
+			<?php
+			//pre($kit_data);
+			?>
             <li>
-                <a href="#part-Подготовительные-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_preparatory_work"
                    class="active">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/1.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/1.svg" alt="">
                     <span> Подготовительные</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Фундамент-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_base"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/2.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/2.svg" alt="">
                     <span> Фундамент</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Стены-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_walls"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/3.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/3.svg" alt="">
                     <span> Стены</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Перекрытия-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_ceiling"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/4.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/4.svg" alt="">
                     <span> Перекрытия</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Кровля-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_roof"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/5.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/5.svg" alt="">
                     <span> Кровля</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Утепление-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_insulation"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/6.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/6.svg" alt="">
                     <span> Утепление</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Окна-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_windows"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/7.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/7.svg" alt="">
                     <span> Окна</span>
                 </a>
             </li>
-
             <li>
-                <a href="#part-Двери-1"
+                <a href="#part-<?php echo $kit_prefix; ?>_doors"
                    class="">
-                    <img src="<?php echo get_template_directory_uri();  ?>/images/icons/parts/8.svg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/icons/parts/8.svg" alt="">
                     <span> Двери</span>
                 </a>
             </li>
-
         </ul>
 
-        <div id="parts-1">
+        <div id="parts-<?php echo $kit_prefix; ?>">
 
-            <div class="tab-panel active" id="part-Подготовительные-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel active" id="part-<?php echo $kit_prefix; ?>_preparatory_work">
 
-						<?php get_the_kit_item( $kit_prefix, $kit_item_name); ?>
-
-						<?php pre(get_field( 'kb_kit', 'option' )); ?>
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png" data-fancybox="">
-                                    <img src="images/uploads/offer-service.png" alt="">
-                                </a>
+						<?php
+						$item_name      = 'preparatory_work';
+						$kit_items_data = $kit_data[ $item_name ];
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <!--                                                            <table>-->
-                                <!--                                                                <tr>-->
-                                <!--                                                                    <td>Монолитная утепленная фундаментная плита-->
-                                <!--                                                                    </td>-->
-                                <!--                                                                    <td>-->
-                                <!--                                                                        <ul>-->
-                                <!--                                                                            <li>-->
-                                <!--                                                                                Высота ( толщина) плиты 300 мм-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Выборка котлована</li>-->
-                                <!--                                                                            <li>Песчаная подушка с послойным-->
-                                <!--                                                                                трамбованием-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Подушка из щебня фракцией 20-40-->
-                                <!--                                                                                мм с-->
-                                <!--                                                                                трамбованием 200 мм-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Пеноплекс 50 мм</li>-->
-                                <!--                                                                            <li>Гидроизоляция</li>-->
-                                <!--                                                                            <li>Двойной арматурный каркас, ячея-->
-                                <!--                                                                                200*200 мм арматура диаметр 12-->
-                                <!--                                                                                мм, А-->
-                                <!--                                                                                III, защитный слой бетона 30-50-->
-                                <!--                                                                                мм-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Бетон заводского изготовления,-->
-                                <!--                                                                                марки-->
-                                <!--                                                                                М 300-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Закладные гильзы под инженерные-->
-                                <!--                                                                                сети: вода, электричество,-->
-                                <!--                                                                                канализация-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Вибрирование бетона с помощью-->
-                                <!--                                                                                глубинного вибратора-->
-                                <!--                                                                            </li>-->
-                                <!--                                                                            <li>Снятие опалубки</li>-->
-                                <!--                                                                        </ul>-->
-                                <!--                                                                    </td>-->
-                                <!--                                                                </tr>-->
-                                <!--                                                                <tr>-->
-                                <!--                                                                    <td>Гидроизоляция</td>-->
-                                <!--                                                                    <td>Двойная гидроизоляция фундамента —-->
-                                <!--                                                                        гидростеклоизол-->
-                                <!--                                                                    </td>-->
-                                <!--                                                                </tr>-->
-                                <!--                                                            </table>-->
-                            </div>
-                        </div>
-
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+							<?php
+						}
+						?>
             </div>
 
-            <div class="tab-panel " id="part-Фундамент-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_base">
+						<?php
+						$item_name      = 'base';
+						$kit_items_data = $kit_data[ $item_name ];
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+							<?php
+						}
+						?>
             </div>
 
-            <div class="tab-panel "
-                 id="part-Стены-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_walls">
+						<?php
+						$item_name      = 'walls';
+						$kit_items_data = $kit_data[ $item_name ];
+						                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
+							<?php
+						}
+						?>
             </div>
 
-            <div class="tab-panel "
-                 id="part-Перекрытия-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_ceiling">
 
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
+				<?php
+				$item_name      = 'ceiling';
+				$kit_items_data = $kit_data[ $item_name ];
+				//                        pre($kit_items_data);
+				$i = 1;
+				if ( $kit_items_data ) {
+					?>
+                    <div class="offer-service is-border">
+                        <div class="offer-service__content">
+							<?php
+							$kit_items_data_count = count( $kit_items_data );
+							foreach ( $kit_items_data as $kit_item ) {
+								//                            pre($kit_item);
+								$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+								?>
+                                <div class="row gy-20">
+                                    <div class="col-lg-6">
+                                        <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                            <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                 alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+										<?php
+										echo $kit_item[ $item_name . '_text' ]
+										?>
+                                    </div>
+                                </div>
+								<?php
+								if ( $i > 0 && $i != $kit_items_data_count ) {
+									echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+								}
+								$i ++;
+							}
+							?>
                         </div>
-
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
                     </div>
-                </div>
+					<?php
+				}
+				?>
+
             </div>
 
-            <div class="tab-panel "
-                 id="part-Кровля-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_roof">
 
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+						<?php
+						$item_name      = 'roof';
+						$kit_items_data = $kit_data[ $item_name ];
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+							<?php
+						}
+						?>
 
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
 
-            <div class="tab-panel "
-                 id="part-Утепление-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_insulation">
 
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+						<?php
+						$item_name      = 'insulation';
+						$kit_items_data = $kit_data[ $item_name ];
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+							<?php
+						}
+						?>
 
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
 
-            <div class="tab-panel "
-                 id="part-Окна-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_windows">
 
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+						<?php
+						$item_name      = 'windows';
+						$kit_items_data = $kit_data[ $item_name ];
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+							<?php
+						}
+						?>
 
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
 
-            <div class="tab-panel "
-                 id="part-Двери-1">
-                <div class="offer-service is-border">
-                    <div class="offer-service__content">
+            <div class="tab-panel " id="part-<?php echo $kit_prefix; ?>_doors">
 
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
+						<?php
+						$item_name      = 'doors';
+						$kit_items_data = $kit_data[ $item_name ];
+
+						//                        pre($kit_items_data);
+						$i = 1;
+						if ( $kit_items_data ) {
+							?>
+                            <div class="offer-service is-border">
+                                <div class="offer-service__content">
+									<?php
+									$kit_items_data_count = count( $kit_items_data );
+									foreach ( $kit_items_data as $kit_item ) {
+//                            pre($kit_item);
+										$kit_item_img_url = wp_get_attachment_image_url( $kit_item[ $item_name . '_img' ], $size );
+										?>
+                                        <div class="row gy-20">
+                                            <div class="col-lg-6">
+                                                <a href="<?php echo $kit_item_img_url ?>" data-fancybox="">
+                                                    <img src="<?php echo ix_get_img_url_for_id( $kit_item[ $item_name . '_img' ], 690 ); ?>"
+                                                         alt="">
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-6">
+												<?php
+												echo $kit_item[ $item_name . '_text' ]
+												?>
+                                            </div>
+                                        </div>
+										<?php
+										if ( $i > 0 && $i != $kit_items_data_count ) {
+											echo '<div class="text-md text-center my-25"><b>ИЛИ</b></div>';
+										}
+										$i ++;
+									}
+									?>
+                                </div>
                             </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+							<?php
+						}
+						?>
 
-                        <div class="text-md text-center my-25"><b>ИЛИ</b></div>
-
-
-                        <div class="row gy-20">
-                            <div class="col-lg-6">
-                                <a href="images/uploads/offer-service.png"
-                                   data-fancybox="">
-                                    <img src="images/uploads/offer-service.png"
-                                         alt="">
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <table>
-                                    <tr>
-                                        <td>Монолитная утепленная фундаментная плита
-                                        </td>
-                                        <td>
-                                            <ul>
-                                                <li>
-                                                    Высота ( толщина) плиты 300 мм
-                                                </li>
-                                                <li>Выборка котлована</li>
-                                                <li>Песчаная подушка с послойным
-                                                    трамбованием
-                                                </li>
-                                                <li>Подушка из щебня фракцией 20-40
-                                                    мм с
-                                                    трамбованием 200 мм
-                                                </li>
-                                                <li>Пеноплекс 50 мм</li>
-                                                <li>Гидроизоляция</li>
-                                                <li>Двойной арматурный каркас, ячея
-                                                    200*200 мм арматура диаметр 12
-                                                    мм, А
-                                                    III, защитный слой бетона 30-50
-                                                    мм
-                                                </li>
-                                                <li>Бетон заводского изготовления,
-                                                    марки
-                                                    М 300
-                                                </li>
-                                                <li>Закладные гильзы под инженерные
-                                                    сети: вода, электричество,
-                                                    канализация
-                                                </li>
-                                                <li>Вибрирование бетона с помощью
-                                                    глубинного вибратора
-                                                </li>
-                                                <li>Снятие опалубки</li>
-                                            </ul>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Гидроизоляция</td>
-                                        <td>Двойная гидроизоляция фундамента —
-                                            гидростеклоизол
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -2476,25 +1778,26 @@ function get_the_kit_item( $kit_prefix, $mob_version = false ) {
 
         </div>
     </div>
-    <?php
-    echo ob_get_clean();
+	<?php
+	echo ob_get_clean();
 
 }
 
-function get_the_kit_item_content( $kit ) {
+//function get_the_kit_item_content( $kit ) {
+//
+//    $kit_name = $kit . '_kit';
+//	$kit_data = get_field( $kit_name, 'option' );
+//	$size = 'full';
+////    $kit_img_url = wp_get_attachment_image_url( $item, $size );
+//
+//    ?>
+    <!---->
+    <!--    --><?php
+//
+//
+//
+//}
 
-    $kit_name = $kit . '_kit';
-	$kit_data = get_field( $kit_name, 'option' );
-	$size = 'full';
-//    $kit_img_url = wp_get_attachment_image_url( $item, $size );
-
-    ?>
-
-    <?php
-
-
-
-}
 function add_custom_option_page_price_correction() {
 	add_submenu_page(
 		'edit.php?post_type=projects',

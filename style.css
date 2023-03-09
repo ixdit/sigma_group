@@ -32,3 +32,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .portfolio-category__text {
     display: none;
 }
+.offer-service__content tr td:first-child {
+    width: 38%;
+}
