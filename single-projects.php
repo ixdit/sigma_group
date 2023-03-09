@@ -23,6 +23,13 @@ if ( $project_number_floors == 1.5 ) {
 $project_number_bedrooms = get_field( 'project_number_bedrooms' );
 $project_number_bathrooms = get_field( 'project_number_bathrooms' );
 
+//для доп опций
+$communications = get_field( 'communications', 'option');
+$exterior_finish = get_field( 'exterior_finish', 'option');
+$interior_finish = get_field( 'interior_finish', 'option');
+$additional_services = get_field( 'additional_services', 'option');
+
+
 //$args_s_project = [
 //	'project_s_zastrojki' => $project_s_zastrojki,
 //	'project_s_fasada'    => $project_s_fasada,
@@ -278,10 +285,9 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                             <div class="home-question__left is-big">
                                 <div class="questions-title">Дополнительные опции</div>
 
-
                                 <div class="question">
                                     <div class="question__head active">
-                                        <span>Инженерные коммуникации 1</span>
+                                        <span>Инженерные коммуникации</span>
 
                                         <svg width="25" height="12">
                                             <use xlink:href="<?php echo get_template_directory_uri();  ?>/images/svg-sprite.svg#arrow-down"></use>
@@ -296,163 +302,51 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                             <th>Добавить</th>
                                             </thead>
                                             <tbody>
+                                            <?php
+                                            $i1 = 1;
+                                            foreach ( $communications as $communications_item ) {
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-1" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-2" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-3" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-4" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+	                                            $communications_property = $communications_item['communications_property'];
+	                                            $communications_item_base_price = $communications_item['communications_item_base_price'];
+	                                            if ( $communications_property == 'meter' ) {
+		                                            $communications_price = $project_s_zastrojki * $communications_item_base_price;
+	                                            }
+	                                            if ( $communications_property == 'single' ) {
+		                                            $communications_price = $communications_item_base_price;
+	                                            }
+	                                            //pre($communications_item);
+	                                            ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="<?php echo ix_get_img($communications_item['communications_lmg'], 200)  ; ?>" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <p>
+                                                            <b><?php echo $communications_item['communications_title']; ?></b>
+                                                        </p>
+	                                                    <?php echo $communications_item['communications_desc']; ?>
+                                                    </td>
+                                                    <td><b class="price"><?php echo number_format_i18n( $communications_price, $decimals = 0 ) ; ?> руб.</b></td>
+                                                    <td>
+                                                        <a class="add btn-table js-check__add" href="" data-price="<?php echo $communications_price; ?>" data-prop="prop-1-<?php echo $i1; ?>" data-title="<?php echo $communications_item['communications_title']; ?>" style="">
+                                                            Добавить
+                                                        </a>
+                                                    </td>
+                                                </tr>
+	                                            <?php
+	                                            $i1++;
+                                            }
+                                            ?>
 
                                             </tbody>
                                         </table>
                                     </div>
+
                                 </div>
 
                                 <div class="question">
                                     <div class="question__head ">
-                                        <span>Инженерные коммуникации 2</span>
+                                        <span>Отделка фасада</span>
 
                                         <svg width="25" height="12">
                                             <use xlink:href="<?php echo get_template_directory_uri();  ?>/images/svg-sprite.svg#arrow-down"></use>
@@ -468,153 +362,40 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                             </thead>
                                             <tbody>
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-1" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-2" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-3" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-4" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            $i2 = 1;
+                                            foreach ( $exterior_finish as $exterior_finish_item ) {
+	                                            $exterior_finish_property = $exterior_finish_item['exterior_finish_property'];
+	                                            $exterior_finish_item_base_price = $exterior_finish_item['exterior_finish_item_base_price'];
+	                                            if ( $exterior_finish_property == 'meter' ) {
+		                                            $exterior_finish_price = $project_s_fasada * $exterior_finish_item_base_price;
+	                                            }
+	                                            if ( $exterior_finish_property == 'single' ) {
+		                                            $exterior_finish_price = $exterior_finish_item_base_price;
+	                                            }
+//            pre($exterior_finish_item);
+	                                            ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="<?php echo ix_get_img($exterior_finish_item['exterior_finish_lmg'], 200)  ; ?>" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <p>
+                                                            <b><?php echo $exterior_finish_item['exterior_finish_title']; ?></b>
+                                                        </p>
+			                                            <?php echo $exterior_finish_item['exterior_finish_desc']; ?>
+                                                    </td>
+                                                    <td><b class="price"><?php echo number_format_i18n( $exterior_finish_price, $decimals = 0 ) ; ?> руб.</b></td>
+                                                    <td>
+                                                        <a class="add btn-table js-check__add" href="" data-price="<?php echo $exterior_finish_price; ?>" data-prop="prop-2-<?php echo $i2; ?>" data-title="<?php echo $exterior_finish_item['exterior_finish_title']; ?>" style="">
+                                                            Добавить
+                                                        </a>
+                                                    </td>
+                                                </tr>
+	                                            <?php
+	                                            $i2++;
+                                            }
+                                            ?>
 
                                             </tbody>
                                         </table>
@@ -623,7 +404,7 @@ $krp_kit = get_field( 'krp_kit', 'option' );
 
                                 <div class="question">
                                     <div class="question__head ">
-                                        <span>Инженерные коммуникации 3</span>
+                                        <span>Внутренняя отдека стен</span>
 
                                         <svg width="25" height="12">
                                             <use xlink:href="<?php echo get_template_directory_uri();  ?>/images/svg-sprite.svg#arrow-down"></use>
@@ -639,153 +420,41 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                             </thead>
                                             <tbody>
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-1" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            $i3 = 1;
+                                            foreach ( $interior_finish as $interior_finish_item ) {
+	                                            $interior_finish_property = $interior_finish_item['interior_finish_property'];
+	                                            $interior_finish_item_base_price = $interior_finish_item['interior_finish_item_base_price'];
+	                                            if ( $interior_finish_property == 'meter' ) {
+		                                            $interior_finish_price = $project_s_zastrojki * $interior_finish_item_base_price;
+	                                            }
+	                                            if ( $interior_finish_property == 'single' ) {
+		                                            $interior_finish_price = $interior_finish_item_base_price;
+	                                            }
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-2" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-3" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-4" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+//            pre($interior_finish_item);
+	                                            ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="<?php echo ix_get_img($interior_finish_item['interior_finish_lmg'], 200)  ; ?>" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <p>
+                                                            <b><?php echo $interior_finish_item['interior_finish_title']; ?></b>
+                                                        </p>
+			                                            <?php echo $interior_finish_item['interior_finish_desc']; ?>
+                                                    </td>
+                                                    <td><b class="price"><?php echo number_format_i18n( $interior_finish_price, $decimals = 0 ) ; ?> руб.</b></td>
+                                                    <td>
+                                                        <a class="add btn-table js-check__add" href="" data-price="<?php echo $interior_finish_price; ?>" data-prop="prop-3-<?php echo $i3; ?>" data-title="<?php echo $interior_finish_item['interior_finish_title']; ?>" style="">
+                                                            Добавить
+                                                        </a>
+                                                    </td>
+                                                </tr>
+	                                            <?php
+	                                            $i3++;
+                                            }
+                                            ?>
 
                                             </tbody>
                                         </table>
@@ -794,7 +463,7 @@ $krp_kit = get_field( 'krp_kit', 'option' );
 
                                 <div class="question">
                                     <div class="question__head ">
-                                        <span>Инженерные коммуникации 4</span>
+                                        <span>Дополнительные услуги</span>
 
                                         <svg width="25" height="12">
                                             <use xlink:href="<?php echo get_template_directory_uri();  ?>/images/svg-sprite.svg#arrow-down"></use>
@@ -810,153 +479,33 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                             </thead>
                                             <tbody>
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-1" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                            <?php
+                                            $i4 = 1;
+                                            foreach ( $additional_services as $additional_services_item ) {
+//            pre($additional_services_item);
+	                                            ?>
+                                                <tr>
+                                                    <td>
+                                                        <img src="<?php echo ix_get_img($additional_services_item['additional_services_lmg'], 200)  ; ?>" alt="">
+                                                    </td>
+                                                    <td>
+                                                        <p>
+                                                            <b><?php echo $additional_services_item['additional_services_title']; ?></b>
+                                                        </p>
+			                                            <?php echo $additional_services_item['additional_services_desc']; ?>
+                                                    </td>
+                                                    <td></td>
+                                                    <td>
+                                                        <a class="add btn-table js-check__add" href="" data-price="" data-prop="prop-4-<?php echo $i4; ?>" data-title="<?php echo $additional_services_item['additional_services_title']; ?>" style="">
+                                                            Добавить
+                                                        </a>
+                                                    </td>
+                                                </tr>
 
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-2" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-3" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <img src="https://picsum.photos/200/200" alt="">
-                                                </td>
-                                                <td>
-                                                    <p>
-                                                        <b>Электроснабжение</b>
-                                                    </p>
-                                                    <ul>
-                                                        <li>- Сертифицированный медный
-                                                            кабель ВВГнг ГОСТ (сечения 3*2,5
-                                                            ;
-                                                            3*1,5)
-                                                        </li>
-                                                        <li>- Штробление;</li>
-                                                        <li>- Укладка и монтаж кабеля в
-                                                            кабель-канала до точек
-                                                            подключения;
-                                                        </li>
-                                                        <li>- Вывод точек под розетки,
-                                                            выключатели, светильники;
-                                                        </li>
-                                                        <li>- Монтаж и подключение
-                                                            электрощита, автоматов;
-                                                        </li>
-                                                        <li>- Заземление.</li>
-                                                    </ul>
-                                                </td>
-                                                <td><b class="price">396 000 руб.</b></td>
-                                                <td>
-                                                    <a class="add btn-table js-check__add" href="" data-price="20020"
-                                                       data-prop="prop-4" data-title="Канализация" style="">
-                                                        Добавить
-                                                    </a>
-                                                </td>
-                                            </tr>
+	                                            <?php
+	                                            $i4++;
+                                            }
+                                            ?>
 
                                             </tbody>
                                         </table>
