@@ -19,10 +19,9 @@ get_header();
                 </div>
 
                 <div class="page-head">
-                    <h1 class="page-title h3">Наши проекты домов</h1>
+                    <h1 class="page-title h3">Серийные проекты</h1>
                     <div class="page-text">
-                        Строительство домов под ключ - в Новгороде и Новгородской области. <br>
-                        Вы можете заказать строительство дома по понравившемуся вам проекту.
+                        <?php the_archive_description(); ?>
                     </div>
                 </div>
 

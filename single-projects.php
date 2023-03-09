@@ -186,7 +186,7 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <input type="radio" name="category" id="category-1" checked>
                                         <label for="category-1">
                                             Газоблок
-                                            <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
+                                            <img src="<?php echo get_template_directory_uri();  ?>/images/gb.png" alt="">
                                             <span class="price"><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ) ; ?> руб.</span>
                                             <?php if(get_field( 'project_old_price_gazoblok')) : ?>
                                                 <span class="price-sm"><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ); ?> руб.</span>
@@ -198,7 +198,7 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <input type="radio" name="category" id="category-2">
                                         <label for="category-2">
                                             Керамоблок
-                                            <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
+                                            <img src="<?php echo get_template_directory_uri();  ?>/images/kb.png" alt="">
                                             <span class="price"><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ) ; ?> руб.</span>
 	                                        <?php if(get_field( 'project_old_price_keramoblok')) : ?>
                                                 <span class="price-sm"><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ); ?> руб.</span>
@@ -210,7 +210,7 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <input type="radio" name="category" id="category-3">
                                         <label for="category-3">
                                             Кирпич
-                                            <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
+                                            <img src="<?php echo get_template_directory_uri();  ?>/images/krp.png" alt="">
                                             <span class="price"><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ) ; ?> руб.</span>
 	                                        <?php if(get_field( 'project_old_price_kirpich')) : ?>
                                                 <span class="price-sm"><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ); ?> руб.</span>
@@ -247,21 +247,21 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                     <div class="mb-3">
                         <ul class="js-tab-controls single-lg__price-tabs" data-tabs="price">
                             <li>
-                                <a href="#price-1" class="active">
+                                <a href="#price-1" class="active js-check__tab" data-title="Газоблок" data-price="<?php echo $project_price_gazoblok; ?>">
                                     Газоблок
                                     <span><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ) ; ?> руб.</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#price-2" class="">
+                                <a href="#price-2" class="js-check__tab" data-title="Керамоблок" data-price="<?php echo $project_price_keramoblok; ?>">
                                     Керамоблок
                                     <span><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ) ; ?> руб.</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#price-3" class="">
+                                <a href="#price-3" class="js-check__tab" data-title="Кирпич" data-price="<?php echo $project_price_kirpich; ?>">
                                     Кирпич
                                     <span><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ) ; ?> руб.</span>
                                 </a>

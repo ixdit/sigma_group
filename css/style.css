@@ -2048,11 +2048,12 @@ label.error {
 
 .js-grid .item {
   display: block;
+  border-radius: 7px;
+  overflow: hidden;
 }
 
 .js-grid .item:not(.inline) {
   background: #FFFFFF;
-  border-radius: 7px;
   padding: 25px;
 }
 
@@ -2311,9 +2312,6 @@ label.error {
   font-size: 22px;
   line-height: 27px;
   color: #FFFFFF;
-  position: sticky;
-  top: 95px;
-  z-index: 20;
   margin-bottom: 25px;
 }
 
@@ -2463,6 +2461,13 @@ label.error {
   line-height: 27px;
   color: #41556C;
   margin-bottom: 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.single-lg__why .item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3))), #FFFFFF;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), #FFFFFF;
 }
 
 .single-lg__why .item {
@@ -3336,6 +3341,10 @@ label.error {
 
 .modal-order p {
   font-size: 16px;
+}
+
+.d-none {
+  display: none;
 }
 
 .site-footer {
@@ -6190,6 +6199,14 @@ label.error {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .d-lg-block {
+    display: block !important;
+  }
+
+  .d-lg-none {
+    display: none;
   }
 
   .site-header__burger {
