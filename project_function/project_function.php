@@ -265,7 +265,7 @@ function get_the_kit_item( $kit_prefix, $mob_version = false ) {
 						<?php
 						$item_name      = 'walls';
 						$kit_items_data = $kit_data[ $item_name ];
-						                        pre($kit_items_data);
+//						                        pre($kit_items_data);
 						$i = 1;
 						if ( $kit_items_data ) {
 							?>
