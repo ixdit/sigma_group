@@ -40,18 +40,18 @@ function ix_scripts() {
 	//wp_enqueue_script( 'ix-script', get_template_directory_uri() . '/js/script.js', array('jquery'),'1.0.0', true ); // мои скрипты
 
 
-//    wp_enqueue_script(
-//        'true_loadmore',
-//        get_stylesheet_directory_uri() . '/js/loadmore.js',
-//        array( 'jquery' ),
-//        time() // не кэшируем файл, убираем эту строчку после завершение разработки
-//    );
-//
-//    wp_localize_script(
-//        'true_loadmore',
-//        'misha',
-//        array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
-//    );
+    wp_enqueue_script(
+        'ix_loadmore',
+        get_stylesheet_directory_uri() . '/js/loadmore.js',
+        array( 'jquery' ),
+        time() // не кэшируем файл, убираем эту строчку после завершение разработки
+    );
+
+    wp_localize_script(
+        'ix_loadmore',
+        'ix',
+        array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) )
+    );
 
     wp_localize_script(
         'ix-send',

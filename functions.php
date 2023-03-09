@@ -143,7 +143,7 @@ require get_template_directory() . '/work_online/register_work_online_type.php';
  * Функции обработки проектов
  */
 require get_template_directory() . '/project_function/project_function.php';
-
+require get_template_directory() . '/inc/loadmore.php';
 /**
  * Функции темы
  * главная
@@ -154,6 +154,12 @@ require get_template_directory() . '/inc/home_page_function.php';
  * доп функции темы
  */
 require get_template_directory() . '/inc/admin/custom_theme_settings.php';
+
+/**
+ * бесконечная подгрузка
+ */
+//require get_template_directory() . '/inc/loadmore.php';
+
 
 /**
  * Implement the Custom Header feature.

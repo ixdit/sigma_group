@@ -322,7 +322,42 @@ get_header();
 
 
                     </div>
+	            <?php
+	            global $wp_query;
 
+	            // текущая страница
+	            $paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+	            // максимум страниц
+	            $max_pages = $wp_query->max_num_pages;
+
+	            $cur_filter_param = $_GET;
+	            $data_cur_filter = '';
+
+	            foreach ($cur_filter_param as $key => $value ){
+		            $data_cur_filter .= ' data-'.$key.'="'.$value.'"';
+	            }
+
+	            //            echo '$paged - '.$paged;
+
+
+	            // если текущая страница меньше, чем максимум страниц, то выводим кнопку
+	            if( $paged < $max_pages ) {
+                    ?>
+
+                    <?php
+		            echo '<div id="loadmore" style="text-align:center;" class="loadmore_btn_block">
+                        <a href="#" data-cat = "doma" data-max_pages="' . $max_pages . '" data-paged="' . $paged . '" class="" '.$data_cur_filter.'>
+                            <div class="preloader">
+                                <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                          d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+                                    </path>
+                                </svg>
+                            </div>    
+                        </a>
+                    </div>';
+	            }
+	            ?>
             </div>
         </div>
 

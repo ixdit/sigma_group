@@ -35,3 +35,45 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .offer-service__content tr td:first-child {
     width: 38%;
 }
+
+/* preloader */
+/*.preloader {*/
+/*    !*position: fixed;*!*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    overflow: hidden;*/
+/*    !* фоновый цвет *!*/
+/*    background: #e0e0e0;*/
+/*    z-index: 1001;*/
+/*}*/
+
+.preloader__image {
+    position: relative;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.preloader {
+    opacity: 0;
+}
+
+.load .preloader {
+    transition: 0.3s opacity;
+    opacity: 1;
+}
+
+
