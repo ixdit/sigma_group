@@ -9,9 +9,13 @@
 
 get_header();
 
-$project_price_gazoblok   = number_format_i18n( get_field( 'project_price_gazoblok' ), $decimals = 0 );
-$project_price_keramoblok = number_format_i18n( get_field( 'project_price_keramoblok' ), $decimals = 0 );
-$project_price_kirpich    = number_format_i18n( get_field( 'project_price_kirpich' ), $decimals = 0 );
+//$project_price_gazoblok   = number_format_i18n( get_field( 'project_price_gazoblok' ), $decimals = 0 );
+//$project_price_keramoblok = number_format_i18n( get_field( 'project_price_keramoblok' ), $decimals = 0 );
+//$project_price_kirpich    = number_format_i18n( get_field( 'project_price_kirpich' ), $decimals = 0 );
+
+$project_price_gazoblok = get_field('project_price_gazoblok');
+$project_price_keramoblok = get_field('project_price_keramoblok');
+$project_price_kirpich = get_field('project_price_kirpich');
 
 $project_s_doma        = get_field( 'project_s_doma' );
 $project_s_zastrojki   = get_field( 'project_s_zastrojki' );
@@ -183,9 +187,9 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <label for="category-1">
                                             Газоблок
                                             <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
-                                            <span class="price"><?php echo $project_price_gazoblok; ?> руб.</span>
+                                            <span class="price"><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ) ; ?> руб.</span>
                                             <?php if(get_field( 'project_old_price_gazoblok')) : ?>
-                                                <span class="price-sm"><?php echo $project_old_price_gazoblok; ?> руб.</span>
+                                                <span class="price-sm"><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ); ?> руб.</span>
                                             <?php endif; ?>
                                         </label>
                                     </div>
@@ -195,9 +199,9 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <label for="category-2">
                                             Керамоблок
                                             <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
-                                            <span class="price"><?php echo $project_price_keramoblok; ?> руб.</span>
+                                            <span class="price"><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ) ; ?> руб.</span>
 	                                        <?php if(get_field( 'project_old_price_keramoblok')) : ?>
-                                                <span class="price-sm"><?php echo $project_old_price_keramoblok; ?> руб.</span>
+                                                <span class="price-sm"><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ); ?> руб.</span>
 	                                        <?php endif; ?>
                                         </label>
                                     </div>
@@ -207,9 +211,9 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         <label for="category-3">
                                             Кирпич
                                             <img src="<?php echo get_template_directory_uri();  ?>/images/category.png" alt="">
-                                            <span class="price"><?php echo $project_price_kirpich; ?> руб.</span>
+                                            <span class="price"><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ) ; ?> руб.</span>
 	                                        <?php if(get_field( 'project_old_price_kirpich')) : ?>
-                                                <span class="price-sm"><?php echo $project_old_price_kirpich; ?> руб.</span>
+                                                <span class="price-sm"><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ); ?> руб.</span>
 	                                        <?php endif; ?>
                                         </label>
                                     </div>
@@ -245,21 +249,21 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                             <li>
                                 <a href="#price-1" class="active">
                                     Газоблок
-                                    <span><?php echo $project_price_gazoblok; ?> руб.</span>
+                                    <span><?php echo number_format_i18n( $project_price_gazoblok , $decimals = 0 ) ; ?> руб.</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#price-2" class="">
                                     Керамоблок
-                                    <span><?php echo $project_price_keramoblok; ?> руб.</span>
+                                    <span><?php echo number_format_i18n( $project_price_keramoblok , $decimals = 0 ) ; ?> руб.</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#price-3" class="">
                                     Кирпич
-                                    <span><?php echo $project_price_kirpich; ?> руб.</span>
+                                    <span><?php echo number_format_i18n( $project_price_kirpich , $decimals = 0 ) ; ?> руб.</span>
                                 </a>
                             </li>
 
@@ -562,15 +566,15 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                         </span>
                                         <div class="gy-20 js-check__prices">
                                             <div class="col-item">
-                                                Стоимость: <b class="js-check__main-price">2 445 751 </b> руб.
+                                                Стоимость: <b class="js-check__main-price"><?php echo number_format_i18n($project_price_gazoblok); ?> </b> руб.
                                             </div>
                                             <div class="col-item js-check__props none">Дополнения:
                                                 <ul></ul>
                                             </div>
                                             <div class="col-item">
                                                 Итого:
-                                                <b class="js-check__price" data-price="2445751">
-                                                    2&nbsp;445&nbsp;751 </b>
+                                                <b class="js-check__price" data-price="<?php echo $project_price_gazoblok; ?>">
+	                                                <?php echo number_format_i18n($project_price_gazoblok); ?> </b>
                                                 руб.
                                             </div>
                                             <div class="col-item">
