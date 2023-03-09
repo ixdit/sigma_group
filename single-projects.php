@@ -552,14 +552,14 @@ $krp_kit = get_field( 'krp_kit', 'option' );
                                 </div>
 
                                 <div class="result-calculator">
-                                    <div class="consultation-name">Дом по проекту Х-16</div>
+                                    <div class="consultation-name"><?php the_title(); ?></div>
 
                                     <form class="panel product-check js-check">
-                        <span class="d-block mb-25">
-                            Комплектация:
-                            <span class="js-check__main-name">Газоблок</span>
-                            <input type="hidden" class="project_material" name="project_set_material" value="Газоблок">
-                        </span>
+                                        <span class="d-block mb-25">
+                                            Комплектация:
+                                            <span class="js-check__main-name">Газоблок</span>
+                                            <input type="hidden" class="project_material" name="project_set_material" value="Газоблок">
+                                        </span>
                                         <div class="gy-20 js-check__prices">
                                             <div class="col-item">
                                                 Стоимость: <b class="js-check__main-price">2 445 751 </b> руб.
