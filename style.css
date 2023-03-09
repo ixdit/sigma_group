@@ -1,0 +1,34 @@
+/*!
+Theme Name: sg-2site
+Theme URI: http://underscores.me/
+Author: Dmitry_V (2site.ru)
+Author URI: http://2site.ru
+Description:
+Version: 1.0.1
+Tested up to: 7.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ix
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+sg-2site is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+.page {
+    padding-bottom: 0px !important;
+}
+.portfolio_category_link {
+    text-decoration: none !important;
+    /*margin-bottom: 15px;*/
+    display: block;
+}
+.portfolio-category__text {
+    display: none;
+}
