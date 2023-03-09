@@ -3,6 +3,24 @@
     "title": "Галерея проекта",
     "fields": [
         {
+            "key": "field_64098141d33c1",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Два первых изображения 730 на 485 пикселей, либо пропорционального размера\r\nДругие изображения 1024 на 768 пикселей",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_615a81f916734",
             "label": "",
             "name": "project_gallery",
@@ -49,5 +67,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678343633
+    "modified": 1678344842
 }
