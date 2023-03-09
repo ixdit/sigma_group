@@ -225,41 +225,6 @@ $krp_kit = get_field( 'krp_kit', 'option' );
 
                         <?php get_the_project_gallery(); ?>
 
-                        <div class="col-md-6">
-                            <a href="images/uploads/single.jpg" data-fancybox="">
-                                <img src="images/uploads/single.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="images/uploads/single.jpg" data-fancybox="">
-                                <img src="images/uploads/single.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3 col-6">
-                            <a href="images/uploads/single-sm.jpg" data-fancybox="">
-                                <img src="images/uploads/single-sm.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3 col-6">
-                            <a href="images/uploads/single-sm.jpg" data-fancybox="">
-                                <img src="images/uploads/single-sm.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3 col-6">
-                            <a href="images/uploads/single-sm.jpg" data-fancybox="">
-                                <img src="images/uploads/single-sm.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3 col-6">
-                            <a href="images/uploads/single-sm.jpg" data-fancybox="">
-                                <img src="images/uploads/single-sm.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-
                     </div>
                 </div>
 

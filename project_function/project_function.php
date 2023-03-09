@@ -52,7 +52,40 @@ function get_the_project_info() {
 	return;
 }
 
+/**
+ * Галерея Планировки и фасады типовые проекты
+ */
 function get_the_project_gallery() {
+
+	$project_gallery_ids = get_field( 'project_gallery' );
+	$size = 'full';
+
+    ob_start();
+
+    $i = 0;
+    foreach ( $project_gallery_ids as $item ) {
+
+        if ( $i == 0 || $i == 1 ) {
+            ?>
+            <div class="col-md-6">
+                <a href="<?php echo wp_get_attachment_image_url( $item, $size ); ?>" data-fancybox="">
+                    <img src="<?php echo ix_get_img_url_for_id( $item, 730, 485)?>" alt="" class="img-responsive">
+                </a>
+            </div>
+            <?php
+        } else {
+            ?>
+            <div class="col-sm-3 col-6">
+                <a href="<?php echo wp_get_attachment_image_url( $item, $size ); ?>" data-fancybox="">
+                    <img src="<?php echo ix_get_img_url_for_id( $item, 355, 235 )?>" alt="" class="img-responsive">
+                </a>
+            </div>
+            <?php
+        }
+        $i++;
+    }
+
+    echo ob_get_clean();
 
 }
 
