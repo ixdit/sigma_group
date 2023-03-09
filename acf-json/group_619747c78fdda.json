@@ -1,0 +1,45 @@
+{
+    "key": "group_619747c78fdda",
+    "title": "Карта для стр. контакты",
+    "fields": [
+        {
+            "key": "field_619747ebc5515",
+            "label": "",
+            "name": "contact_page_map",
+            "aria-label": "",
+            "type": "yandex-map",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "height": 400,
+            "map_type": "map",
+            "zoom": 14,
+            "center_lat": "58.533464555537",
+            "center_lng": "31.275122835832"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template\/page_contact_tpl.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1678380131
+}

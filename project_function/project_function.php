@@ -937,20 +937,6 @@ function get_the_kit_item( $kit_prefix, $mob_version = false ) {
 
 }
 
-//function get_the_kit_item_content( $kit ) {
-//
-//    $kit_name = $kit . '_kit';
-//	$kit_data = get_field( $kit_name, 'option' );
-//	$size = 'full';
-////    $kit_img_url = wp_get_attachment_image_url( $item, $size );
-//
-//    ?>
-    <!---->
-    <!--    --><?php
-//
-//
-//
-//}
 
 function add_custom_option_page_price_correction() {
 	add_submenu_page(
@@ -1136,7 +1122,7 @@ function calculate_price_correction() {
 		$percent_canadian_bowl_price_srub       = $price_collection['doma_canadian_bowl_price_srub'];
 		$percent_canadian_bowl_price_pod_usadku = $price_collection['doma_canadian_bowl_price_pod_usadku'];
 	}
-	if ( $term && $percent_russian_bowl_price_srub || $percent_russian_bowl_price_pod_usadku || $percent_canadian_bowl_price_srub || $percent_canadian_bowl_price_pod_usadku ) {
+	if ( $term && ($percent_russian_bowl_price_srub || $percent_russian_bowl_price_pod_usadku || $percent_canadian_bowl_price_srub || $percent_canadian_bowl_price_pod_usadku) ) {
 		$posts = get_posts( [
 			//            'meta_key'    => 'project_old_id',
 			//            'meta_value'  => $project_old_id,

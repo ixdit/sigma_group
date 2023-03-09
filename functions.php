@@ -357,6 +357,6 @@ add_filter( 'kama_breadcrumbs_args', function($args){
 
 // данные для отладки крошек
 //add_filter( 'kama_breadcrumbs_filter_elements', 'kama_breadcrumbs_filter_elms', 11, 3 );
-function kama_breadcrumbs_filter_elms( $elms, $class, $ptype ){
-	die( pre( $elms ) );
-}
+//function kama_breadcrumbs_filter_elms( $elms, $class, $ptype ){
+//	die( pre( $elms ) );
+//}
