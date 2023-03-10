@@ -1,9 +1,9 @@
 {
-    "key": "group_6143522ae7a73",
-    "title": "Страница Отделка фасада",
+    "key": "group_640bc2d412de0",
+    "title": "Страница Инженерные сети",
     "fields": [
         {
-            "key": "field_614353330ba8d",
+            "key": "field_640bc2d427c0a",
             "label": "Шапка",
             "name": "",
             "aria-label": "",
@@ -20,7 +20,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_61435527f8997",
+            "key": "field_640bc2d42b6b4",
             "label": "Изображение",
             "name": "offers_header_fon_img",
             "aria-label": "",
@@ -45,7 +45,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_614353a20ba90",
+            "key": "field_640bc2d42f0dc",
             "label": "Заголовок H1",
             "name": "offers_block_h1",
             "aria-label": "",
@@ -65,7 +65,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_614353dc0ba91",
+            "key": "field_640bc2d432aed",
             "label": "Текст под заголовком",
             "name": "offers_desc",
             "aria-label": "",
@@ -85,7 +85,7 @@
             "new_lines": ""
         },
         {
-            "key": "field_614353690ba8e",
+            "key": "field_640bc2d436672",
             "label": "Блок предложений",
             "name": "",
             "aria-label": "",
@@ -102,7 +102,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_614355eab4f41",
+            "key": "field_640bc2d43a211",
             "label": "Заголовок блока",
             "name": "offers_block_section_title",
             "aria-label": "",
@@ -122,7 +122,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_6143561eb4f42",
+            "key": "field_640bc2d43dc33",
             "label": "Набор блоков предложений",
             "name": "offers_single_blocks",
             "aria-label": "",
@@ -140,9 +140,10 @@
             "max": 0,
             "layout": "block",
             "button_label": "Добавить",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_61435677b4f43",
+                    "key": "field_640bc2d46b5e2",
                     "label": "Заголовок",
                     "name": "offers_single_name",
                     "aria-label": "",
@@ -160,10 +161,10 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": "",
-                    "parent_repeater": "field_6143561eb4f42"
+                    "parent_repeater": "field_640bc2d43dc33"
                 },
                 {
-                    "key": "field_61435725b4f45",
+                    "key": "field_640bc2d46f1bf",
                     "label": "Описание",
                     "name": "offers_single_desc",
                     "aria-label": "",
@@ -181,10 +182,10 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": "",
-                    "parent_repeater": "field_6143561eb4f42"
+                    "parent_repeater": "field_640bc2d43dc33"
                 },
                 {
-                    "key": "field_616deaccffd62",
+                    "key": "field_640bc2d472d2b",
                     "label": "Цена",
                     "name": "offers_single_price",
                     "aria-label": "",
@@ -202,13 +203,12 @@
                     "placeholder": "",
                     "prepend": "от",
                     "append": "₽\/м2",
-                    "parent_repeater": "field_6143561eb4f42"
+                    "parent_repeater": "field_640bc2d43dc33"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
-            "key": "field_614353840ba8f",
+            "key": "field_640bc2d44183f",
             "label": "Блок наши работы",
             "name": "",
             "aria-label": "",
@@ -225,7 +225,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_614357b1b4f47",
+            "key": "field_640bc2d445465",
             "label": "Заголовок блока",
             "name": "offers_porfolio_section_title",
             "aria-label": "",
@@ -245,7 +245,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_614358410a431",
+            "key": "field_640bc2d448f22",
             "label": "Галерея работ",
             "name": "offers_porfolio_section_galery",
             "aria-label": "",
@@ -278,7 +278,7 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "template\/page_facade_finishing_tpl.php"
+                "value": "template\/page_engineering_networks_tpl.php"
             }
         ]
     ],
@@ -291,5 +291,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678492662
+    "modified": 1678492631
 }
