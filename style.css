@@ -107,4 +107,25 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     text-decoration: none !important;
 }
 
+/*контакты*/
+@media (max-width: 991.98px) {
+    .team__picture {
+        height: 410px;
+    }
+}
+
+/*jobs*/
+.job__content strong {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.js-three-slider {
+    display: none;
+}
+.js-three-slider.slick-initialized {
+    display: block;
+}
+
+
 
