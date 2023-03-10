@@ -19,7 +19,7 @@ get_header();
                 </div>
 
                 <div class="page-head">
-                    <h1 class="page-title h3">Серийные проекты</h1>
+                    <h1 class="page-title h3"><?php the_archive_title(); ?></h1>
                     <div class="page-text">
                         <?php the_archive_description(); ?>
                     </div>
