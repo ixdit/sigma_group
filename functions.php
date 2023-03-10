@@ -366,3 +366,39 @@ add_filter( 'kama_breadcrumbs_args', function($args){
 //function kama_breadcrumbs_filter_elms( $elms, $class, $ptype ){
 //	die( pre( $elms ) );
 //}
+
+/**
+ * сквозная форма в конце страницы
+ */
+add_action('through_feedback_bottom_form', 'through_feedback_bottom_form' );
+function through_feedback_bottom_form() {
+
+	ob_start();
+	?>
+	<div class="feedback-container">
+		<div class="container">
+			<div class="feedback-user">
+				<div class="content">
+					<div class="title h3">
+						<b>Получить консультацию специалиста</b>
+					</div>
+
+					<form action="" class="form">
+						<div class="form-group">
+							<input type="text" placeholder="Ваше имя" class="form-input-solid">
+						</div>
+						<div class="form-group">
+							<input type="text" placeholder="+7 (___) ___-__-__" class="form-input-solid js-phone-mask">
+						</div>
+						<button type="submit" class="btn btn-green btn-block">Заказать звонок</button>
+					</form>
+				</div>
+				<div class="img">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/feedback.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php
+	echo ob_get_clean();
+}

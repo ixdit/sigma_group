@@ -21,7 +21,7 @@
         },
         {
             "key": "field_61435527f8997",
-            "label": "Фоновое изображение",
+            "label": "Изображение",
             "name": "offers_header_fon_img",
             "aria-label": "",
             "type": "image",
@@ -34,7 +34,6 @@
                 "id": ""
             },
             "return_format": "url",
-            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -42,27 +41,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_61fb215cb9b27",
-            "label": "Фоновое видео",
-            "name": "page_video_bg",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_614353a20ba90",
@@ -102,66 +82,6 @@
             "placeholder": "",
             "maxlength": "",
             "rows": 6,
-            "new_lines": ""
-        },
-        {
-            "key": "field_614354730ba92",
-            "label": "Текст на кнопке",
-            "name": "offers_btn_name",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Получить смету",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_616e62e66ad6a",
-            "label": "Ссылка на кнопку",
-            "name": "offers_btn_link",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_614354b40ba93",
-            "label": "Текст рядом с кнопкой",
-            "name": "offers_btn_desk",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Закажите бесплатный расчет и в течении 24 часов вы получите полную смету",
-            "placeholder": "",
-            "maxlength": "",
-            "rows": 4,
             "new_lines": ""
         },
         {
@@ -384,7 +304,7 @@
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "default"
+                "value": "template\/page_facade_finishing_tpl.php"
             }
         ]
     ],
@@ -397,5 +317,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678381890
+    "modified": 1678408110
 }
