@@ -49,7 +49,6 @@ get_header();
 	                    if ($offers_single_blocks) {
                             ob_start();
 		                    foreach ( $offers_single_blocks as $single_block) {
-                                // $single_block['offers_single_img']; // есть изображение
 			                    ?>
                                 <div class="item">
                                     <div class="offer">
