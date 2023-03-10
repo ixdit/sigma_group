@@ -92,8 +92,8 @@
             <div class="row">
                 <div class="col-lg-4 col-sm-3 col-6">
                     <a href="">
-                        <img src="images/logo-white.svg" alt="" class="logo is-desktop">
-                        <img src="images/logo-short-white.svg" alt="" class="logo is-mobile">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo-white.svg" alt="" class="logo is-desktop">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo-short-white.svg" alt="" class="logo is-mobile">
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-5 col-6 site-footer__mobile">
@@ -110,16 +110,16 @@
                 <div class="col-lg-2 col-sm-4 col-6">
                     <div class="site-footer__socials">
                         <a href="">
-                            <img src="images/social/telegram.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/social/telegram.svg" alt="">
                         </a>
                         <a href="">
-                            <img src="images/social/vk.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/social/vk.svg" alt="">
                         </a>
                         <a href="">
-                            <img src="images/social/whatsapp.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/social/whatsapp.svg" alt="">
                         </a>
                         <a href="">
-                            <img src="images/social/youtube.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/social/youtube.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -131,14 +131,14 @@
 <div class="fixed-nav">
     <button type="button" class="js-fixed">
         <svg width="12" height="12">
-            <use xlink:href="images/svg-sprite.svg#close"></use>
+            <use xlink:href="<?php echo get_template_directory_uri(); ?>/images/svg-sprite.svg#close"></use>
         </svg>
     </button>
     <div class="fixed-nav__fixed">
         <a href="">
             <span>
                 <svg width="34" height="32">
-                    <use xlink:href="images/svg-sprite.svg#fixed-house"></use>
+                    <use xlink:href="<?php echo get_template_directory_uri(); ?>/images/svg-sprite.svg#fixed-house"></use>
                 </svg>
             </span>
             Проект на просчет
@@ -146,7 +146,7 @@
         <a href="">
         <span>
             <svg width="34" height="32">
-                <use xlink:href="images/svg-sprite.svg#fixed-calculator"></use>
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/images/svg-sprite.svg#fixed-calculator"></use>
             </svg>
         </span>
             Калькулятор
@@ -154,7 +154,7 @@
         <a href="">
         <span>
             <svg width="34" height="32">
-                <use xlink:href="images/svg-sprite.svg#fixed-health"></use>
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/images/svg-sprite.svg#fixed-health"></use>
             </svg>
         </span>
             Избранное
@@ -162,7 +162,7 @@
         <a href="">
         <span>
             <svg width="34" height="32">
-                <use xlink:href="images/svg-sprite.svg#fixed-saves"></use>
+                <use xlink:href="<?php echo get_template_directory_uri(); ?>/images/svg-sprite.svg#fixed-saves"></use>
             </svg>
         </span>
             В закладки
@@ -220,19 +220,19 @@
             <div class="col-4">
                 <a href="">
                     <span>Великий Новгород</span>
-                    <img src="images/city/novgorod.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/city/novgorod.jpg" alt="">
                 </a>
             </div>
             <div class="col-4">
                 <a href="">
                     <span>Санкт-Петербург</span>
-                    <img src="images/city/piter.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/city/piter.jpg" alt="">
                 </a>
             </div>
             <div class="col-4">
                 <a href="">
                     <span>Москва</span>
-                    <img src="images/city/msk.jpg" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/city/msk.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -241,10 +241,10 @@
 
 <div class="fixed-social">
     <a href="">
-        <img src="images/fixed-socials/tg.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/fixed-socials/tg.svg" alt="">
     </a>
     <a href="">
-        <img src="images/fixed-socials/wp.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/fixed-socials/wp.svg" alt="">
     </a>
 </div>
 

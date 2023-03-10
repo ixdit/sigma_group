@@ -21,9 +21,38 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+input::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #D9D9D9 !important;
+
+}
+input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #D9D9D9;
+    opacity: 1;
+
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #D9D9D9;
+    opacity: 1;
+
+}
+input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #D9D9D9;
+}
+input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #D9D9D9 !important;
+}
+
+input::placeholder { /* Most modern browsers support this now. */
+    color: #D9D9D9 !important;
+
+}
+
 input {
     outline: none !important;
+    font: 16px "Montserrat", sans-serif;
 }
+
 .page {
     padding-bottom: 0px !important;
 }
