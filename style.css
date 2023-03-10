@@ -76,4 +76,35 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     opacity: 1;
 }
 
+/* крошки */
+.kama_breadcrumbs {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.kama_breadcrumbs a {
+    color: #1E3859;
+    text-decoration: none;
+}
+
+.kama_breadcrumbs span {
+    color: #1E3859;
+    text-decoration: underline;
+}
+
+.kb_sep {
+    margin: 0 10px;
+    text-decoration: none !important;
+}
+.kb_link {
+    text-decoration: none !important;
+}
+
 

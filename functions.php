@@ -361,6 +361,21 @@ add_filter( 'kama_breadcrumbs_args', function($args){
 	       + $args;
 } );
 
+/**
+ * добавим крошку ссылку на разводную страницу проектов
+ */
+add_filter( 'kama_breadcrumbs_filter_elements', 'kama_breadcrumbs_add_elements', 10, 3 );
+
+function kama_breadcrumbs_add_elements( $elms, $class, $ptype ){
+
+	if ( is_tax('catalog') || is_singular( 'projects' )) {
+		$elms['home_after'][] = $class->makelink( '/projects/', 'Наши проекты' );
+    }
+	//$elms['home_after'][] = $class->makelink( '/projects/', 'Наши проекты' );
+
+	return $elms;
+}
+
 // данные для отладки крошек
 //add_filter( 'kama_breadcrumbs_filter_elements', 'kama_breadcrumbs_filter_elms', 11, 3 );
 //function kama_breadcrumbs_filter_elms( $elms, $class, $ptype ){
