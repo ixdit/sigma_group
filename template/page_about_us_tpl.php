@@ -21,7 +21,7 @@ $all_img = get_field( 'aboutus_all_img' );
 	                <?php if (get_field('aboutus_custom_h1')) {
 		                echo '<h1 class="page-title">'.get_field( 'aboutus_custom_h1' ).'</h1>';
 	                } else {
-		                echo '<h1 class="page-title">'.the_title().'</h1>';
+		                echo '<h1 class="page-title">'.get_the_title().'</h1>';
 	                }?>
                 </div>
 
