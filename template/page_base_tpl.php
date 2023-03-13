@@ -137,7 +137,7 @@ get_header();
 	                <?php endif; ?>
 
 
-	            <?php $bases_gallery_ids = get_field( 'bases_gallery' ); ?>
+	            <?php $bases_gallery_ids = get_field( 'base_gallery' ); ?>
 	            <?php $size = 'full'; ?>
 	            <?php if ( $bases_gallery_ids ) :  ?>
                     <section class="mb-70">
