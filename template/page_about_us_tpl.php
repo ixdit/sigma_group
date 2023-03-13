@@ -222,8 +222,10 @@ $all_img = get_field( 'aboutus_all_img' );
 
 
 
-                <?php if(false) :
+                <?php
                 //TODO  сделать выборки из раздела отзывов отдельно видео и катринки
+                if(false) :
+
                 ?>
                 <section class="mb-70">
                     <div class="mb-25">
