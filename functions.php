@@ -147,8 +147,13 @@ require get_template_directory() . '/inc/loadmore.php';
 /**
  * Функции темы
  * главная
+ * сквозные блоки отзывов и обработчик ссылок
+ * hook do_action( 'video_reviews_across' , 'get_the_video_reviews_across');
+ * hook do_action( 'images_reviews_across' , 'get_the_video_reviews_across');
+ *
  */
 require get_template_directory() . '/inc/home_page_function.php';
+require get_template_directory() . '/inc/reviews_across_function.php';
 
 /**
  * доп функции темы

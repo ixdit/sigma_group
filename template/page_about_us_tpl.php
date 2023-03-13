@@ -224,7 +224,7 @@ $all_img = get_field( 'aboutus_all_img' );
 
                 <?php
                 //TODO  сделать выборки из раздела отзывов отдельно видео и катринки
-                if(false) :
+                if(true) :
 
                 ?>
                 <section class="mb-70">
@@ -235,35 +235,7 @@ $all_img = get_field( 'aboutus_all_img' );
                     <div class="mb-3">
                         <div class="js-video-slider">
 
-                            <div class="item">
-                                <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                    <img src="images/video.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                    <img src="images/video.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                    <img src="images/video.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                    <img src="images/video.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                    <img src="images/video.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
+                            <?php do_action( 'video_reviews_across' , 'get_the_video_reviews_across'); ?>
 
                         </div>
                     </div>
@@ -271,35 +243,7 @@ $all_img = get_field( 'aboutus_all_img' );
                     <div class="home-certificates">
                         <div class="js-certificates-slider">
 
-                            <div class="item">
-                                <a data-fancybox href="images/certificate.jpg">
-                                    <img src="images/certificate.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="images/certificate.jpg">
-                                    <img src="images/certificate.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="images/certificate.jpg">
-                                    <img src="images/certificate.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="images/certificate.jpg">
-                                    <img src="images/certificate.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
-
-                            <div class="item">
-                                <a data-fancybox href="images/certificate.jpg">
-                                    <img src="images/certificate.jpg" alt="" class="img-responsive">
-                                </a>
-                            </div>
+                            <?php do_action( 'images_reviews_across' , 'get_the_img_reviews_across'); ?>
 
                         </div>
                     </div>
