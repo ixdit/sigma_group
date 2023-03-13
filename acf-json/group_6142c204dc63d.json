@@ -888,6 +888,26 @@
             "endpoint": 0
         },
         {
+            "key": "field_640fb5cfde128",
+            "label": "Подпись блока для главной страницы",
+            "name": "home_reviews_across_desc",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ХХ клиентов уже живут в домах, построенных нами",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_640fa2a4dbbcf",
             "label": "Видео отзывы",
             "name": "video_reviews_across",
@@ -1001,5 +1021,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1678746762
+    "modified": 1678751260
 }

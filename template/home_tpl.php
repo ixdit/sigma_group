@@ -615,7 +615,7 @@ $size = 'full';
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="images/book.png" class="feedback__image" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/book.png" class="feedback__image" alt="">
                         </div>
                     </div>
                 </div>
@@ -639,7 +639,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">1</div>
 
-                            <div class="work__image"><img src="images/work-icon/1.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/1.svg" alt="">
                             </div>
 
                             <div class="work__title">Разработка проекта включает</div>
@@ -657,7 +657,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">2</div>
 
-                            <div class="work__image"><img src="images/work-icon/2.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/2.svg" alt="">
                             </div>
 
                             <div class="work__title">В строительстве дома участвуют</div>
@@ -677,7 +677,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">3</div>
 
-                            <div class="work__image"><img src="images/work-icon/3.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/3.svg" alt="">
                             </div>
 
                             <div class="work__title">Дом строят профессионалы в своей специальности</div>
@@ -696,7 +696,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">4</div>
 
-                            <div class="work__image"><img src="images/work-icon/4.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/4.svg" alt="">
                             </div>
 
                             <div class="work__title">Все работы выполняются по договору</div>
@@ -713,7 +713,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">5</div>
 
-                            <div class="work__image"><img src="images/work-icon/5.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/5.svg" alt="">
                             </div>
 
                             <div class="work__title">Поэтапный, гибкий график платежей</div>
@@ -727,7 +727,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">6</div>
 
-                            <div class="work__image"><img src="images/work-icon/6.svg" alt="">
+                            <div class="work__image"><img src="<?php echo get_template_directory_uri();?>/images/work-icon/6.svg" alt="">
                             </div>
 
                             <div class="work__title">Выполняем весь комплекс работ под ключ</div>
@@ -746,7 +746,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">1</div>
                             <div class="work__image">
-                                <img src="images/work-icon/1.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/1.svg" alt="">
                             </div>
                             <div class="work__title">Разработка проекта включает</div>
                             <ul>
@@ -762,7 +762,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">2</div>
                             <div class="work__image">
-                                <img src="images/work-icon/2.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/2.svg" alt="">
                             </div>
                             <div class="work__title">В строительстве дома участвуют</div>
                             <ul>
@@ -780,7 +780,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">3</div>
                             <div class="work__image">
-                                <img src="images/work-icon/3.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/3.svg" alt="">
                             </div>
                             <div class="work__title">Дом строят профессионалы в своей специальности</div>
                             <ul>
@@ -797,7 +797,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">4</div>
                             <div class="work__image">
-                                <img src="images/work-icon/4.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/4.svg" alt="">
                             </div>
                             <div class="work__title">Все работы выполняются по договору</div>
                             <ul>
@@ -812,7 +812,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">5</div>
                             <div class="work__image">
-                                <img src="images/work-icon/5.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/5.svg" alt="">
                             </div>
                             <div class="work__title">Поэтапный, гибкий график платежей</div>
                             <ul>
@@ -824,7 +824,7 @@ $size = 'full';
                         <div class="work">
                             <div class="work__number">6</div>
                             <div class="work__image">
-                                <img src="images/work-icon/6.svg" alt="">
+                                <img src="<?php echo get_template_directory_uri();?>/images/work-icon/6.svg" alt="">
                             </div>
                             <div class="work__title">Выполняем весь комплекс работ под ключ</div>
                             <ul>
@@ -843,67 +843,19 @@ $size = 'full';
                 <div class="mb-3">
                     <div class="h3 mb-3 color-blue">#ОТЗЫВЫ</div>
                     <div class="h2 color-blue">
-                        ХХ клиентов уже живут в домах, построенных нами
+	                    <?php the_field( 'home_reviews_across_desc', 'option' ); ?>
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <div class="js-video-slider">
-                        <div class="item">
-                            <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                <img src="images/video.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                <img src="images/video.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                <img src="images/video.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                <img src="images/video.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="https://youtu.be/Zv11L-ZfrSg">
-                                <img src="images/video.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
+	                    <?php do_action( 'video_reviews_across' , 'get_the_video_reviews_across'); ?>
                     </div>
                 </div>
 
                 <div class="home-certificates">
                     <div class="js-certificates-slider">
-                        <div class="item">
-                            <a data-fancybox href="images/certificate.jpg">
-                                <img src="images/certificate.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="images/certificate.jpg">
-                                <img src="images/certificate.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="images/certificate.jpg">
-                                <img src="images/certificate.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="images/certificate.jpg">
-                                <img src="images/certificate.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a data-fancybox href="images/certificate.jpg">
-                                <img src="images/certificate.jpg" alt="" class="img-responsive">
-                            </a>
-                        </div>
+	                    <?php do_action( 'images_reviews_across' , 'get_the_img_reviews_across'); ?>
                     </div>
                 </div>
             </div>
