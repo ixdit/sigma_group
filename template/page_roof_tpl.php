@@ -35,7 +35,7 @@ get_header();
                                 <div class="mb-25">
                                     <h2 class="h3 color-blue"><b><?php the_sub_field( 'title' ); ?></b></h2>
                                 </div>
-	                            <?php pre( get_sub_field('roof_installation')); ?>
+
                                 <?php if ( have_rows( 'roof_installation_item' ) ) : ?>
                                 <?php $i = 1; ?>
                                     <?php while ( have_rows( 'roof_installation_item' ) ) : the_row(); ?>
