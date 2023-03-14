@@ -954,7 +954,7 @@ $size = 'full';
                             </form>
                         </div>
                         <div class="img">
-                            <img src="images/feedback.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri();?>/images/feedback.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -1008,7 +1008,7 @@ $size = 'full';
                             <div>
                                 <div>
                                     <svg width="25" height="12">
-                                        <use xlink:href="images/svg-sprite.svg#arrow-down-white"></use>
+                                        <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-sprite.svg#arrow-down-white"></use>
                                     </svg>
                                 </div>
                                 <div>
@@ -1018,7 +1018,7 @@ $size = 'full';
                             <div>
                                 <div>
                                     <svg width="25" height="12">
-                                        <use xlink:href="images/svg-sprite.svg#arrow-down-white"></use>
+                                        <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-sprite.svg#arrow-down-white"></use>
                                     </svg>
                                 </div>
                                 <div>
@@ -1028,7 +1028,7 @@ $size = 'full';
                             <div>
                                 <div>
                                     <svg width="25" height="12">
-                                        <use xlink:href="images/svg-sprite.svg#arrow-down-white"></use>
+                                        <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-sprite.svg#arrow-down-white"></use>
                                     </svg>
                                 </div>
                                 <div>
@@ -1038,7 +1038,7 @@ $size = 'full';
                             <div>
                                 <div>
                                     <svg width="25" height="12">
-                                        <use xlink:href="images/svg-sprite.svg#arrow-down-white"></use>
+                                        <use xlink:href="<?php echo get_template_directory_uri();?>/images/svg-sprite.svg#arrow-down-white"></use>
                                     </svg>
                                 </div>
                                 <div>
